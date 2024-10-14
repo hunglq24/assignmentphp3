@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\File;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -21,7 +22,8 @@ class ProductController extends Controller
         return view('admin.products.add-product');
     }
 
-    public function addPostProduct(Request $req){
+    public function addPostProduct(ProductRequest $req){
+
         $linkImage = null;
         if($req->hasFile('imageProduct')){
             $image = $req->file('imageProduct');
@@ -32,10 +34,10 @@ class ProductController extends Controller
             $linkImage = 'imageProducts/' . $newName;
         }
         $data = [
-            'name_product' => $req->nameProduct,
-            'price' => $req->priceProduct,
-            'view' => $req->viewProduct,
-            'description' => $req->descriptionProduct,
+            'name_product' => $req->name_product,
+            'price' => $req->price,
+            'view' => $req->view,
+            'description' => $req->description,
             'image' => $linkImage
         ];
         Product::create($data);
@@ -62,7 +64,7 @@ class ProductController extends Controller
         ]);
     }
 
-    public function updatePutProduct($product_id, Request $req){
+    public function updatePutProduct($product_id, ProductRequest $req){
         $product = Product::where('product_id', $product_id)->first();
         $linkImage = $product->image;
         if($req->hasFile('imageProduct')){
@@ -75,10 +77,10 @@ class ProductController extends Controller
             $linkImage = $linkStorage . $newName;
         }
         $data = [
-            'name_product' => $req->nameProduct,
-            'price' => $req->priceProduct,
-            'view' => $req->viewProduct,
-            'description' => $req->descriptionProduct,
+            'name_product' => $req->name_product,
+            'price' => $req->price,
+            'view' => $req->view,
+            'description' => $req->description,
             'image' => $linkImage
 
         ];

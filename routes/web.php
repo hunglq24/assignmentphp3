@@ -9,16 +9,6 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('login', [AuthController::class, 'postLogin'])->name('postLogin');
@@ -140,5 +130,8 @@ Route::group(
 );
 
 
-Route::get('content', [ContentController::class, 'content']);
-Route::get('aonam', [ContentController::class, 'aonam']);
+Route::get('home', [ContentController::class, 'content']);
+Route::get('aonam', [ContentController::class, 'aonam'])->name('aonam');
+Route::get('quannam', [ContentController::class, 'quannam'])->name('quannam');
+Route::get('tuisach', [ContentController::class, 'tuisach'])->name('tuisach');
+Route::get('chitiet', [ContentController::class, 'chitiet'])->name('chitiet');

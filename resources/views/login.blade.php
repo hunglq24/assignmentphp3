@@ -60,6 +60,7 @@
                                         <div class="form-group">
 
                                             <button type="submit" class="btn-login">Login</button>
+
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -72,6 +73,7 @@
                                                 </div>
                                             </div>
                                             <a class="lost-password" href="#/">Lost your password?</a>
+                                            <a href="{{ route('register')}}" class="btn-register">Register</a>
                                         </div>
                                     </div>
                                 </div>

@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
@@ -21,9 +22,9 @@ class CategoryController extends Controller
         return view('admin.categorys.add-category');
     }
 
-    public function addPostCategory(Request $req){
+    public function addPostCategory(CategoryRequest $req){
         $data = [
-            'name_category' => $req->nameCategory,
+            'name_category' => $req->name_category,
         ];
         Category::create($data);
         return redirect()->route('admin.categorys.listCategory')->with([
@@ -46,11 +47,11 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function updatePutCategory($category_id, Request $req){
+    public function updatePutCategory($category_id, CategoryRequest $req){
         $category = Category::where('category_id', $category_id)->first();
 
         $data = [
-            'name_category' => $req->nameCategory,
+            'name_category' => $req->name_category,
         ];
         Category::where('category_id', $category_id)->update($data);
         return redirect()->route('admin.categorys.listCategory')->with([

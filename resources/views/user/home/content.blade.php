@@ -102,48 +102,51 @@
           <div class="col-lg-4 col-md-6">
             <!--== Start Product Collection Item ==-->
             <div class="product-collection">
+                <a href="{{ route('aonam') }}">
               <div class="inner-content">
                 <div class="product-collection-content">
                   <div class="content">
-                    <h3 class="title"><a href="#">Áo Nam</a></h3>
+                    <h3 class="title">Áo Nam</h3>
                     <h4 class="price">From $95.00</h4>
                   </div>
                 </div>
                 <div class="product-collection-thumb" data-bg-img="{{ asset('assets/img/shop/collection/1.webp') }}"></div>
-                <a class="banner-link-overlay" href="#"></a>
               </div>
+            </a>
             </div>
             <!--== End Product Collection Item ==-->
           </div>
           <div class="col-lg-4 col-md-6">
             <!--== Start Product Collection Item ==-->
             <div class="product-collection">
+                <a href="{{ route('quannam') }}">
               <div class="inner-content">
                 <div class="product-collection-content">
                   <div class="content">
-                    <h3 class="title"><a href="shop.html">Quần Nam</a></h3>
+                    <h3 class="title">Quần Nam</h3>
                     <h4 class="price">From $90.00</h4>
                   </div>
                 </div>
                 <div class="product-collection-thumb" data-bg-img="{{ asset('assets/img/shop/collection/2.webp')}}"></div>
-                <a class="banner-link-overlay" href="shop.html"></a>
               </div>
+            </a>
             </div>
             <!--== End Product Collection Item ==-->
           </div>
           <div class="col-lg-4 col-md-6">
             <!--== Start Product Collection Item ==-->
             <div class="product-collection">
+                <a href="{{ route('tuisach') }}">
               <div class="inner-content">
                 <div class="product-collection-content">
                   <div class="content">
-                    <h3 class="title"><a href="shop.html">Túi Sách Nam</a></h3>
+                    <h3 class="title">Túi Sách Nam</h3>
                     <h4 class="price">From $82.00</h4>
                   </div>
                 </div>
                 <div class="product-collection-thumb" data-bg-img="{{ asset('assets/img/shop/collection/3.webp')}}"></div>
-                <a class="banner-link-overlay" href="shop.html"></a>
               </div>
+            </a>
             </div>
             <!--== End Product Collection Item ==-->
           </div>

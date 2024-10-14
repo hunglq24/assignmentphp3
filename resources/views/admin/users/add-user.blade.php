@@ -11,20 +11,29 @@
         <form action="{{ route('admin.users.addPostUser') }}" method="POST" >
             @csrf
             <div class="mb-3">
-                <label for="nameUser">Name: </label>
-                <input type="text" id="nameUser" class="form-control" name="nameUser">
+                <label for="name">Name: </label>
+                <input type="text" id="name" class="form-control" name="name">
+                @error('name')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="emailUser">Email:</label>
-                <input type="email" id="emailUser" class="form-control" name="emailUser">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" name="email">
+                @error('email')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="passwordUser">Password:</label>
-                <input type="password" id="passwordUser" class="form-control" name="passwordUser">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" name="password">
+                @error('password')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="roleUser">Role:</label>
-                <select id="roleUser" class="form-control" name="roleUser" required>
+                <label for="role">Role:</label>
+                <select id="role" class="form-control" name="role">
                     <option value="1">Admin</option>
                     <option value="2">User</option>
                 </select>

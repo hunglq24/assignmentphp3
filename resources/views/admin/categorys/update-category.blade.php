@@ -12,8 +12,11 @@
             @method('put')
             @csrf
             <div class="mb-3">
-                <label for="nameCategory">Name: </label>
-                <input type="text" id="nameCategory" class="form-control" name="nameCategory" value="{{$category->name_category}}">
+                <label for="name_category">Name: </label>
+                <input type="text" id="name_category" class="form-control" name="name_category" value="{{$category->name_category}}">
+                @error('name_category')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <button type="submit" class="btn btn-info">Sửa</button>
             <a href="{{ route('admin.categorys.listCategory') }}" class="btn btn-warning ">Quay lại</a>

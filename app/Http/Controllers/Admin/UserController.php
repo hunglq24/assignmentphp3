@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -20,12 +22,12 @@ class UserController extends Controller
         return view('admin.users.add-user');
     }
 
-    public function addPostUser(Request $req){
+    public function addPostUser(UserRequest $req){
         $data = [
-            'name' => $req->nameUser,
-            'email' => $req->emailUser,
-            'password' => $req->passwordUser,
-            'role' => $req->roleUser,
+            'name' => $req->name,
+            'email' => $req->email,
+            'password' => $req->password,
+            'role' => $req->role,
         ];
         User::create($data);
         return redirect()->route('admin.users.listUser')->with([
@@ -48,14 +50,13 @@ class UserController extends Controller
         ]);
     }
 
-    public function updatePutUser($user_id, Request $req){
+    public function updatePutUser($user_id, UserRequest $req){
         $user = User::where('user_id', $user_id)->first();
         $data = [
-            'name' => $req->nameUser,
-            'email' => $req->emailUser,
-            'password' => $req->passwordUser,
-            'role' => $req->roleUser,
-
+            'name' => $req->name,
+            'email' => $req->email,
+            'password' => Hash::make($req->password),
+            'role' => $req->role,
         ];
         User::where('user_id', $user_id)->update($data);
         return redirect()->route('admin.users.listUser')->with([

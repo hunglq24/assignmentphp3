@@ -56,7 +56,7 @@
               </div>
               <div class="header-middle-align-center">
                 <div class="header-search-area">
-                  <form class="header-searchbox">
+                  <form class="header-searchbox" id="searchForm" action="#" method="GET">
                     <input type="search" class="form-control" placeholder="Search">
                     <button class="btn-submit" type="submit"><i class="pe-7s-search"></i></button>
                   </form>
@@ -89,71 +89,27 @@
       </div>
     </div>
     <div class="header-area header-default">
-      <div class="container">
-        <div class="row no-gutter align-items-center position-relative">
-          <div class="col-12">
-            <div class="header-align">
-              <div class="header-navigation-area position-relative">
-                <ul class="main-menu nav">
-                  <li class="has-submenu"><a href="#/"><span>Home</span></a>
-                    <ul class="submenu-nav">
-                      <li><a href="index-2.html"><span>Home One</span></a></li>
-                      <li><a href="index-two.html"><span>Home Two</span></a></li>
-                    </ul>
-                  </li>
-                  <li><a href="about-us.html"><span>About</span></a></li>
-                  <li class="has-submenu position-static"><a href="#/"><span>Shop</span></a>
-                    <ul class="submenu-nav submenu-nav-mega column-3">
-                      <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Shop Layout</span></a>
-                        <ul>
-                          <li><a href="shop-three-columns.html"><span>Shop 3 Column</span></a></li>
-                          <li><a href="shop-four-columns.html"><span>Shop 4 Column</span></a></li>
-                          <li><a href="shop.html"><span>Shop Left Sidebar</span></a></li>
-                          <li><a href="shop-right-sidebar.html"><span>Shop Right Sidebar</span></a></li>
-                        </ul>
-                      </li>
-                      <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Single Product</span></a>
-                        <ul>
-                          <li><a href="single-normal-product.html"><span>Single Product Normal</span></a></li>
-                          <li><a href="single-product.html"><span>Single Product Variable</span></a></li>
-                          <li><a href="single-group-product.html"><span>Single Product Group</span></a></li>
-                          <li><a href="single-affiliate-product.html"><span>Single Product Affiliate</span></a></li>
-                        </ul>
-                      </li>
-                      <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Others Pages</span></a>
-                        <ul>
-                          <li><a href="shop-cart.html"><span>Shopping Cart</span></a></li>
-                          <li><a href="shop-checkout.html"><span>Checkout</span></a></li>
-                          <li><a href="shop-wishlist.html"><span>Wishlist</span></a></li>
-                          <li><a href="shop-compare.html"><span>Compare</span></a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="has-submenu"><a href="#/"><span>Blog</span></a>
-                    <ul class="submenu-nav submenu-nav-mega">
-                      <li class="mega-menu-item"><a href="#/" class="mega-title">Blog Layout</a>
-                        <ul>
-                          <li><a href="blog.html">Blog Grid</a></li>
-                          <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                          <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                        </ul>
-                      </li>
-                      <li class="mega-menu-item"><a href="#/" class="mega-title">Single Blog</a>
-                        <ul>
-                          <li><a href="blog-details-no-sidebar.html">Blog Details</a></li>
-                          <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                          <li><a href="blog-details.html">Blog Details Right Sidebar</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="contact.html"><span>Contact</span></a></li>
-                </ul>
-              </div>
+        <div class="container">
+            <div class="row no-gutter align-items-center position-relative">
+                <div class="col-12">
+                    <div class="header-align">
+                        <div class="header-navigation-area position-relative">
+                            <ul class="main-menu nav">
+                                <li><a href="home"><span>Home</span></a></li>
+                                <li class="has-submenu position-static"><a href="#/"><span>Danh mục</span></a>
+                                    {{-- <ul class="submenu-nav">
+                                        @foreach ($category as $cate)
+
+                                        <li class="mega-menu-item"><a href="{{ route('page.list', $cate->id) }}" class="mega-title"><span>{{ $cate->name }}</span></a></li>
+                                                    @endforeach
+                                    </ul> --}}
+                                </li>
+                                <li><a href="contact.html"><span>Contact</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   </header>

@@ -12,20 +12,29 @@
             @method('put')
             @csrf
             <div class="mb-3">
-                <label for="nameUser">Name: </label>
-                <input type="text" id="nameUser" class="form-control" name="nameUser" value="{{$user->name}}">
+                <label for="name">Name: </label>
+                <input type="text" id="name" class="form-control" name="name" value="{{$user->name}}">
+                @error('name')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="emailUser">Email:</label>
-                <input type="text" id="emailUser" class="form-control" name="emailUser" value="{{$user->email}}">
+                <label for="email">Email:</label>
+                <input type="text" id="email" class="form-control" name="email" value="{{$user->email}}">
+                @error('email')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="passwordUser">Password:</label>
-                <input type="password" id="passwordUser" class="form-control" name="passwordUser" value="{{$user->password}}">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" name="password" value="{{$user->password}}">
+                @error('password')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="roleUser">Role:</label>
-                <select id="roleUser" class="form-control" name="roleUser" >
+                <label for="role">Role:</label>
+                <select id="role" class="form-control" name="role" >
                     <option value="1" {{ $user->role == 1 ? 'selected' : '' }}>Admin</option>
                     <option value="2" {{ $user->role == 2 ? 'selected' : '' }}>User</option>
                 </select>

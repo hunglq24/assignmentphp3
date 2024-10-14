@@ -11,23 +11,35 @@
         <form action="{{ route('admin.products.addPostProduct') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label for="nameProduct">Name: </label>
-                <input type="text" id="nameProduct" class="form-control" name="nameProduct">
+                <label for="name_product">Name: </label>
+                <input type="text" id="name_product" class="form-control" name="name_product">
+                @error('name_product')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="priceProduct">Giá:</label>
-                <input type="text" id="priceProduct" class="form-control" name="priceProduct">
+                <label for="price">Giá:</label>
+                <input type="text" id="price" class="form-control" name="price">
+                @error('price')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="viewProduct">View:</label>
-                <input type="number" id="viewProduct" class="form-control" name="viewProduct">
+                <label for="view">View:</label>
+                <input type="number" id="view" class="form-control" name="view">
+                @error('view')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="descriptionProduct">Description:</label>
-                <input type="text" id="descriptionProduct" class="form-control" name="descriptionProduct">
+                <label for="description">Description:</label>
+                <input type="text" id="description" class="form-control" name="description">
+                @error('description')
+                    <p class="text-danger">{{ $message}}</p>
+                @enderror
             </div>
-            {{-- Description: 
-            <input type="text" class="form-control" name="descriptionProduct"> --}}
+            {{-- Description:
+            <input type="text" class="form-control" name="description"> --}}
             <div class="mb-3">
                 <label for="imageProduct">Ảnh SP </label>
                 <input type="file" id="imageProduct" name="imageProduct" class="form-control">
@@ -35,6 +47,6 @@
             <button type="submit" class="btn btn-info">Thêm Mới</button>
             <a href="{{ route('admin.products.listProduct') }}" class="btn btn-warning ">Quay lại</a>
         </form>
-        
+
     </div>
 @endsection

@@ -64,9 +64,9 @@
                                     <div class="col-12">
                                         <div class="form-group mb--0">
                                             <button class="btn-register">Register</button>
-                                            {{-- <a class="btn-register" href="shop.html">Register</a> --}}
                                         </div>
                                     </div>
+                                            <a href="{{ route('login')}}" class="btn-register mt-4">Login</a>
                                 </div>
                             </form>
                         </div>
