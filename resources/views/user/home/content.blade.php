@@ -110,7 +110,7 @@
                     <h4 class="price">From $95.00</h4>
                   </div>
                 </div>
-                <div class="product-collection-thumb" data-bg-img="{{ asset('assets/img/shop/collection/1.webp') }}"></div>
+                <div class="product-collection-thumb" data-bg-img="{{ asset('imageProducts/1721818447.jpg') }}"></div>
               </div>
             </a>
             </div>
@@ -127,7 +127,7 @@
                     <h4 class="price">From $90.00</h4>
                   </div>
                 </div>
-                <div class="product-collection-thumb" data-bg-img="{{ asset('assets/img/shop/collection/2.webp')}}"></div>
+                <div class="product-collection-thumb" data-bg-img="{{ asset('imageProducts/1728866345.jpg')}}"></div>
               </div>
             </a>
             </div>
@@ -140,11 +140,11 @@
               <div class="inner-content">
                 <div class="product-collection-content">
                   <div class="content">
-                    <h3 class="title">Túi Sách Nam</h3>
+                    <h3 class="title">Mũ nam</h3>
                     <h4 class="price">From $82.00</h4>
                   </div>
                 </div>
-                <div class="product-collection-thumb" data-bg-img="{{ asset('assets/img/shop/collection/3.webp')}}"></div>
+                <div class="product-collection-thumb" data-bg-img="{{ asset('imageProducts/1728867331.jpg')}}"></div>
               </div>
             </a>
             </div>
@@ -168,14 +168,16 @@
             </div>
           </div>
         </div>
+
         <div class="row">
+            @foreach ($product as $product)
           <div class="col-sm-6 col-lg-3">
             <!--== Start Product Item ==-->
             <div class="product-item">
               <div class="inner-content">
                 <div class="product-thumb">
                   <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/1.webp')}}" width="270" height="274" alt="Image-HasTech">
+                    <img src="{{$product->image}}" width="270" height="274" alt="Image-HasTech">
                   </a>
                   <div class="product-flag">
                     <ul>
@@ -192,6 +194,7 @@
                   </div>
                   <a class="banner-link-overlay" href="shop.html"></a>
                 </div>
+
                 <div class="product-info">
                   <div class="category">
                     <ul>
@@ -200,7 +203,7 @@
                       <li><a href="shop.html">Women</a></li>
                     </ul>
                   </div>
-                  <h4 class="title"><a href="single-product.html">Leather Mens Slipper</a></h4>
+                  <h4 class="title"><a href="single-product.html">{{$product->name_product}}</a></h4>
                   <div class="prices">
                     <span class="price-old">$100</span>
                     <span class="sep">-</span>
@@ -211,272 +214,8 @@
             </div>
             <!--== End prPduct Item ==-->
           </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/2.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">Quickiin Mens shoes</a></h4>
-                  <div class="prices">
-                    <span class="price">$140.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/3.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-flag">
-                    <ul>
-                      <li class="discount">-10%</li>
-                    </ul>
-                  </div>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">Rexpo Womens shoes</a></h4>
-                  <div class="prices">
-                    <span class="price-old">$60</span>
-                    <span class="sep">-</span>
-                    <span class="price">$260.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/4.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">Hollister V-Neck Knit</a></h4>
-                  <div class="prices">
-                    <span class="price">$880.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/5.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">Primitive Mens shoes</a></h4>
-                  <div class="prices">
-                    <span class="price">$500.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/6.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-flag">
-                    <ul>
-                      <li class="discount">-10%</li>
-                    </ul>
-                  </div>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">New Womens High Hills</a></h4>
-                  <div class="prices">
-                    <span class="price-old">$300</span>
-                    <span class="sep">-</span>
-                    <span class="price">$333.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/7.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">Simple Fabric Shoe</a></h4>
-                  <div class="prices">
-                    <span class="price">$133.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <!--== Start Product Item ==-->
-            <div class="product-item">
-              <div class="inner-content">
-                <div class="product-thumb">
-                  <a href="single-product.html">
-                    <img src="{{ asset('assets/img/shop/8.webp')}}" width="270" height="274" alt="Image-HasTech">
-                  </a>
-                  <div class="product-flag">
-                    <ul>
-                      <li class="discount">-10%</li>
-                    </ul>
-                  </div>
-                  <div class="product-action">
-                    <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
-                    <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                    <button type="button" class="btn-product-quick-view-open">
-                      <i class="fa fa-arrows"></i>
-                    </button>
-                    <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
-                  </div>
-                  <a class="banner-link-overlay" href="shop.html"></a>
-                </div>
-                <div class="product-info">
-                  <div class="category">
-                    <ul>
-                      <li><a href="shop.html">Men</a></li>
-                      <li class="sep">/</li>
-                      <li><a href="shop.html">Women</a></li>
-                    </ul>
-                  </div>
-                  <h4 class="title"><a href="single-product.html">exclusive mens shoe</a></h4>
-                  <div class="prices">
-                    <span class="price-old">$300</span>
-                    <span class="sep">-</span>
-                    <span class="price">$420.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--== End prPduct Item ==-->
-          </div>
+          @endforeach
+
         </div>
       </div>
     </section>
@@ -497,7 +236,7 @@
         </div>
       </div>
       <div class="bg-layer-wrap">
-        <div class="bg-layer-style z-index--1 parallax" data-speed="1.05" data-bg-img="{{ asset('assets/img/photos/divider1.webp')}}"></div>
+        <div class="bg-layer-style z-index--1 parallax" data-speed="1.05" data-bg-img="{{ asset('imageProducts/1728866345.jpg')}}"></div>
       </div>
     </section>
     <!--== End Divider Area Wrapper ==-->

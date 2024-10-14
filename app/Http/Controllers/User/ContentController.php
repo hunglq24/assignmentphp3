@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\DB;
 class ContentController extends Controller
 {
     public function content(){
-        return view('user.home.content');
+        $product = Product::all();
+        return view('user.home.content', compact('product'));
 
     }
 
